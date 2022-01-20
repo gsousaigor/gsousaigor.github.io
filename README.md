@@ -1,6 +1,6 @@
 ## Portfolio
 
-I am an IT Support Analyst with more than 10 years of experience and a programming student.
+I am an Senior IT Support Analyst with more than 10 years of experience and a programming student.
 
 ---
 
