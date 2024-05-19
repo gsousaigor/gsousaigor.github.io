@@ -1,6 +1,7 @@
-# Hi , I am Igor Garcia Sousa 
+# Hi , I am [Igor Garcia Sousa](https://github.com/gsousaigor) 
 <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35">
-##  JUNIOR DEVELOPER
+
+## JUNIOR DEVELOPER
 
 <img src = "https://user-images.githubusercontent.com/63050133/156777293-72a6e681-2582-4a9d-ad92-09d1181d47c7.gif" width = 50px height = 50px>
 
@@ -33,7 +34,7 @@
 [<img align="center" height="35" width="35" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/instagram.svg">](https://www.instagram.com/gsousaigor.dev)
 [<img align="center" height="35" width="35" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin.svg">](https://www.linkedin.com/in/gsousaigor/)
 [<img align="center" height="35" width="35" src="https://uploads-ssl.webflow.com/6026bc921eff07d61a132750/602843b7b4409e5ea0cbcc1c_social-logo-2.png">](https://znap.link/gsousaigor)
-[<img align="center" height="35" width="35" src="[https://github.com/gsousaigor/repo-storage/blob/main/github-mark-white.png">](https://www.github.com/gsousaigor)
+[<img align="center" height="35" width="35" src="https://github.com/gsousaigor/repo-storage/blob/main/github-mark-white.png">](https://www.github.com/gsousaigor)
 
 ### Badges
 
@@ -47,5 +48,4 @@
     
 ### Support Me
 
-<a href="https://link.mercadopago.com.br/iggaodev" target="_blank" rel="noopener noreferrer"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="200" />
-</a>
+[https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png](https://link.mercadopago.com.br/iggaodev)
