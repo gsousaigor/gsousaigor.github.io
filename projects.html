@@ -52,7 +52,7 @@
                 `;
 
                 repos
-                    .filter(repo => !repo.fork && repo.name !== 'gsousaigor')
+                    .filter(repo => !repo.fork && !['gsousaigor', 'gsousaigor.github.io'].includes(repo.name))
                     .forEach(repo => {
                         const card = document.createElement('article');
                         card.className = 'skill-card';
