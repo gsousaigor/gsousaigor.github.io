@@ -94,7 +94,7 @@ body {
     letter-spacing: 1px;
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .nav-links a.active-link {
     color: var(--accent-color);
 }
 
@@ -181,6 +181,39 @@ body {
 .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Projects Extras */
+.tech-tag {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.project-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.project-link:hover {
+    color: var(--accent-secondary);
+    transform: translateX(5px);
+}
+
+.loading {
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    padding: 2rem;
+    text-align: center;
+    grid-column: 1 / -1;
 }
 
 /* Sections */

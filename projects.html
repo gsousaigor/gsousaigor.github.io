@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | Igor Garcia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <div class="glow-container"></div>
+    
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">IG<span>.</span>SEC</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">/home</a></li>
+                <li><a href="projects.html" class="active-link">/projects</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Let's talk</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="section-container" style="margin-top: 8rem;">
+        <header class="projects-header">
+            <h2 class="section-label">04 // OPEN SOURCE</h2>
+            <h1 class="hero-title">Meus <span>Projetos</span></h1>
+            <p class="hero-desc">Lista dinâmica de repositórios públicos sincronizados diretamente do meu GitHub.</p>
+        </header>
+
+        <div id="github-projects-container" class="stack-grid">
+            <!-- Os projetos serão carregados aqui via JavaScript -->
+            <div class="loading">Iniciando protocolo de busca no GitHub...</div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="section-container">
+            <p>&copy; 2024 Igor Garcia. <span class="status-indicator">●</span> DevSecOps Engineer</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Script específico para carregar projetos do GitHub
+        async function fetchGitHubRepos() {
+            const container = document.getElementById('github-projects-container');
+            try {
+                const response = await fetch('https://api.github.com/users/gsousaigor/repos?sort=updated&per_page=100');
+                const repos = await response.json();
+                
+                container.innerHTML = ''; // Limpa o loading
+
+                repos
+                    .filter(repo => !repo.fork && repo.name !== 'gsousaigor') // Filtra forks e o repo do perfil
+                    .forEach(repo => {
+                        const card = document.createElement('article');
+                        card.className = 'stack-card reveal-visible';
+                        card.style.display = 'flex';
+                        card.style.flexDirection = 'column';
+                        card.style.justifyContent = 'space-between';
+
+                        const techTag = repo.language ? `<span class="tech-tag">${repo.language}</span>` : '';
+                        
+                        card.innerHTML = `
+                            <div>
+                                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                                    <h3 style="margin-bottom: 0;">${repo.name}</h3>
+                                    ${techTag}
+                                </div>
+                                <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">${repo.description || 'Sem descrição disponível.'}</p>
+                            </div>
+                            <div style="display: flex; gap: 1rem; align-items: center;">
+                                <a href="${repo.html_url}" target="_blank" class="project-link">Ver Código ➔</a>
+                                <span style="font-size: 0.7rem; color: #444; font-family: var(--font-mono);">⭐ ${repo.stargazers_count}</span>
+                            </div>
+                        `;
+                        container.appendChild(card);
+                    });
+            } catch (error) {
+                container.innerHTML = '<div class="error">Erro ao conectar com a API do GitHub. Tente recarregar a página.</div>';
+                console.error(error);
+            }
+        }
+        fetchGitHubRepos();
+    </script>
+</body>
+</html>
