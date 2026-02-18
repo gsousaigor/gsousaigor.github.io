@@ -19,8 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Ano automático no footer
+    updateYear();
+});
+
+function updateYear() {
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
         yearSpan.innerText = new Date().getFullYear();
     }
-});
+}
+
+// Chamar imediatamente para garantir carregamento em páginas dinâmicas
+updateYear();
