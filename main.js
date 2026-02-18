@@ -17,4 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 80);
         }, index * 1000);
     });
+
+    // Ano automático no footer
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+        yearSpan.innerText = new Date().getFullYear();
+    }
 });
