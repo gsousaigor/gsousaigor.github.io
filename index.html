@@ -3,49 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
+    <title>Igor Garcia | DevSecOps Engineer</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Saudação -->
+    <div class="background-overlay"></div>
+    
     <header>
-        <h1>Bem-vindo ao meu site!</h1>
+        <nav>
+            <div class="logo">IG<span>.</span>devsecops</div>
+            <ul>
+                <li><a href="#about">/sobre</a></li>
+                <li><a href="#skills">/skills</a></li>
+                <li><a href="#education">/formação</a></li>
+                <li><a href="#contact">/contato</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Apresentação -->
-    <section id="apresentacao">
-        <h2>Apresentação</h2>
-        <p>Olá, sou o [Seu Nome] e sou um desenvolvedor web.</p>
-    </section>
+    <main>
+        <section id="hero">
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <div class="buttons">
+                        <span class="close"></span>
+                        <span class="minimize"></span>
+                        <span class="maximize"></span>
+                    </div>
+                    <div class="title">igor@devsecops: ~</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="line">
+                        <span class="prompt">igor@devsecops:~$</span> <span class="command">whoami</span>
+                    </div>
+                    <div class="response">
+                        <h1>Igor Garcia</h1>
+                        <p class="subtitle">Especialista em Suporte Sênior & DevSecOps Engineer</p>
+                    </div>
+                    <div class="line">
+                        <span class="prompt">igor@devsecops:~$</span> <span class="command">ls concepts/</span>
+                    </div>
+                    <div class="response">
+                        <span class="tag">#SecurityFirst</span>
+                        <span class="tag">#Automation</span>
+                        <span class="tag">#InfrastructureAsCode</span>
+                        <span class="tag">#CI_CD_Security</span>
+                    </div>
+                    <div class="line">
+                        <span class="prompt">igor@devsecops:~$</span> <span class="cursor">_</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Sobre mim -->
-    <section id="sobre-mim">
-        <h2>Sobre mim</h2>
-        <p>Sou um desenvolvedor web com experiência em HTML, CSS, JavaScript, React, Node.js e MongoDB. Gosto de aprender novas tecnologias e me manter atualizado com as últimas tendências no desenvolvimento web.</p>
-    </section>
+        <section id="about" class="container">
+            <h2 class="section-title">Sobre o Especialista</h2>
+            <div class="about-content">
+                <p>Com uma base sólida construída como <strong>Analista de Suporte de TI Sênior</strong>, hoje foco em unir infraestrutura e segurança através do <strong>DevSecOps</strong>. Minha missão é garantir que a agilidade do DevOps nunca comprometa a integridade dos dados.</p>
+                <p>Acredito que a segurança deve ser intrínseca ao código, não um obstáculo no final do processo.</p>
+            </div>
+        </section>
 
-    <!-- Skills -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>MongoDB</li>
-        </ul>
-    </section>
+        <section id="skills" class="container">
+            <h2 class="section-title">Ecosistema Técnico</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>🛡️ Security</h3>
+                    <ul>
+                        <li>SAST / DAST</li>
+                        <li>Análise de Vulnerabilidades</li>
+                        <li>Network Security</li>
+                        <li>Cloud Security</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>🚀 DevOps & Cloud</h3>
+                    <ul>
+                        <li>Docker & Kubernetes</li>
+                        <li>Terraform / Ansible</li>
+                        <li>Jenkins / GitHub Actions</li>
+                        <li>AWS / Azure</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>💻 Automation</h3>
+                    <ul>
+                        <li>Python Scripting</li>
+                        <li>Bash / Shell</li>
+                        <li>Linux (RHEL / Debian)</li>
+                        <li>Git (Advanced)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <!-- Redes Sociais -->
-    <section id="redes-sociais">
-        <h2>Redes Sociais</h2>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/[seu-nome]/">LinkedIn</a></li>
-            <li><a href="https://github.com/[seu-nome]/">GitHub</a></li>
-            <li><a href="https://twitter.com/[seu-nome]/">Twitter</a></li>
-        </ul>
-    </section>
+        <section id="education" class="container">
+            <h2 class="section-title">Formação Acadêmica</h2>
+            <div class="edu-list">
+                <div class="edu-item">
+                    <span class="year">Pós-Graduação</span>
+                    <div class="edu-info">
+                        <h3>Segurança da Informação</h3>
+                        <p>Foco em defesa cibernética e governança.</p>
+                    </div>
+                </div>
+                <div class="edu-item">
+                    <span class="year">Graduação</span>
+                    <div class="edu-info">
+                        <h3>Redes de Computadores</h3>
+                        <p>Infraestrutura de alta performance e conectividade.</p>
+                    </div>
+                </div>
+                <div class="edu-item">
+                    <span class="year">Graduação</span>
+                    <div class="edu-info">
+                        <h3>Análise e Desenvolvimento de Sistemas</h3>
+                        <p>Arquitetura de software e lógica de programação.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <div class="contact-box">
+                <h2>Pronto para elevar a segurança da sua infraestrutura?</h2>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/gsousaigor/" target="_blank" class="btn">LinkedIn</a>
+                    <a href="https://github.com/gsousaigor" target="_blank" class="btn outline">GitHub</a>
+                    <a href="mailto:gsousaigor@gmail.com" class="btn">Email</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Igor Garcia. <span class="highlight">Status: Operacional</span></p>
+    </footer>
 
     <script src="main.js"></script>
 </body>
