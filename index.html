@@ -3,144 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Igor Garcia | DevSecOps Engineer</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Igor Garcia | DevSecOps & Security Specialist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="background-overlay"></div>
+<body class="dark-theme">
+    <div class="glow-container"></div>
     
-    <header>
-        <nav>
-            <div class="logo">IG<span>.</span>devsecops</div>
-            <ul>
-                <li><a href="#about">/sobre</a></li>
-                <li><a href="#skills">/skills</a></li>
-                <li><a href="#education">/formação</a></li>
-                <li><a href="#contact">/contato</a></li>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">IG<span>.</span>SEC</div>
+            <ul class="nav-links">
+                <li><a href="#about">/about</a></li>
+                <li><a href="#stack">/stack</a></li>
+                <li><a href="#education">/edu</a></li>
+                <li><a href="#contact" class="nav-cta">Let's talk</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="hero">
-            <div class="terminal-container">
-                <div class="terminal-header">
-                    <div class="buttons">
-                        <span class="close"></span>
-                        <span class="minimize"></span>
-                        <span class="maximize"></span>
-                    </div>
-                    <div class="title">igor@devsecops: ~</div>
+        <section class="hero-section">
+            <div class="hero-content">
+                <p class="hero-pretitle">Senior IT Support ➔ DevSecOps Engineer</p>
+                <h1 class="hero-title">Automatizando com <span>Segurança</span>, Escalando com <span>Confiança</span>.</h1>
+                <p class="hero-desc">Igor Garcia. Especialista em infraestrutura e segurança da informação focado em proteger pipelines e automatizar operações críticas.</p>
+                <div class="hero-actions">
+                    <a href="#stack" class="btn primary">Minhas Skills</a>
+                    <a href="https://github.com/gsousaigor" target="_blank" class="btn secondary">GitHub Profile</a>
                 </div>
-                <div class="terminal-body">
-                    <div class="line">
-                        <span class="prompt">igor@devsecops:~$</span> <span class="command">whoami</span>
+            </div>
+        </section>
+
+        <section id="about" class="section about-section">
+            <div class="section-container">
+                <h2 class="section-label">01 // SOBRE</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>De Analista de Suporte Sênior a Especialista em Segurança. Minha trajetória é pautada pela resiliência e pela busca constante por arquiteturas robustas.</p>
+                        <p>Com três formações acadêmicas sólidas, entendo as camadas de rede, o desenvolvimento de sistemas e os protocolos de defesa cibernética como ninguém.</p>
                     </div>
-                    <div class="response">
-                        <h1>Igor Garcia</h1>
-                        <p class="subtitle">Especialista em Suporte Sênior & DevSecOps Engineer</p>
-                    </div>
-                    <div class="line">
-                        <span class="prompt">igor@devsecops:~$</span> <span class="command">ls concepts/</span>
-                    </div>
-                    <div class="response">
-                        <span class="tag">#SecurityFirst</span>
-                        <span class="tag">#Automation</span>
-                        <span class="tag">#InfrastructureAsCode</span>
-                        <span class="tag">#CI_CD_Security</span>
-                    </div>
-                    <div class="line">
-                        <span class="prompt">igor@devsecops:~$</span> <span class="cursor">_</span>
+                    <div class="experience-badge">
+                        <span class="badge-number">03</span>
+                        <span class="badge-text">Formações Acadêmicas<br>Redes | ADS | Pós Sec</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="container">
-            <h2 class="section-title">Sobre o Especialista</h2>
-            <div class="about-content">
-                <p>Com uma base sólida construída como <strong>Analista de Suporte de TI Sênior</strong>, hoje foco em unir infraestrutura e segurança através do <strong>DevSecOps</strong>. Minha missão é garantir que a agilidade do DevOps nunca comprometa a integridade dos dados.</p>
-                <p>Acredito que a segurança deve ser intrínseca ao código, não um obstáculo no final do processo.</p>
-            </div>
-        </section>
-
-        <section id="skills" class="container">
-            <h2 class="section-title">Ecosistema Técnico</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>🛡️ Security</h3>
-                    <ul>
-                        <li>SAST / DAST</li>
-                        <li>Análise de Vulnerabilidades</li>
-                        <li>Network Security</li>
-                        <li>Cloud Security</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>🚀 DevOps & Cloud</h3>
-                    <ul>
-                        <li>Docker & Kubernetes</li>
-                        <li>Terraform / Ansible</li>
-                        <li>Jenkins / GitHub Actions</li>
-                        <li>AWS / Azure</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>💻 Automation</h3>
-                    <ul>
-                        <li>Python Scripting</li>
-                        <li>Bash / Shell</li>
-                        <li>Linux (RHEL / Debian)</li>
-                        <li>Git (Advanced)</li>
-                    </ul>
+        <section id="stack" class="section stack-section">
+            <div class="section-container">
+                <h2 class="section-label">02 // TECH STACK</h2>
+                <div class="stack-grid">
+                    <article class="stack-card">
+                        <h3>Infraestrutura</h3>
+                        <p>Docker, Kubernetes, Terraform, Linux Administration, AWS & Azure.</p>
+                    </article>
+                    <article class="stack-card active">
+                        <h3>Segurança</h3>
+                        <p>SAST/DAST, Cloud Security, Network Defense, InfoSec Governance.</p>
+                    </article>
+                    <article class="stack-card">
+                        <h3>Automação</h3>
+                        <p>Python Scripting, Bash, Jenkins, GitHub Actions, CI/CD Pipelines.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="education" class="container">
-            <h2 class="section-title">Formação Acadêmica</h2>
-            <div class="edu-list">
-                <div class="edu-item">
-                    <span class="year">Pós-Graduação</span>
-                    <div class="edu-info">
-                        <h3>Segurança da Informação</h3>
-                        <p>Foco em defesa cibernética e governança.</p>
+        <section id="education" class="section edu-section">
+            <div class="section-container">
+                <h2 class="section-label">03 // FORMAÇÃO</h2>
+                <div class="edu-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Pós-Graduação em Segurança da Informação</h3>
+                            <p>Especialização em Auditoria, Gestão de Riscos e Defesa de Perímetro.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="edu-item">
-                    <span class="year">Graduação</span>
-                    <div class="edu-info">
-                        <h3>Redes de Computadores</h3>
-                        <p>Infraestrutura de alta performance e conectividade.</p>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Graduação em Redes de Computadores</h3>
+                            <p>Foco em conectividade, protocolos de roteamento e infraestrutura física.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="edu-item">
-                    <span class="year">Graduação</span>
-                    <div class="edu-info">
-                        <h3>Análise e Desenvolvimento de Sistemas</h3>
-                        <p>Arquitetura de software e lógica de programação.</p>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Análise e Desenvolvimento de Sistemas</h3>
+                            <p>Engenharia de software, lógica e arquitetura de aplicações.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="container">
-            <div class="contact-box">
-                <h2>Pronto para elevar a segurança da sua infraestrutura?</h2>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/gsousaigor/" target="_blank" class="btn">LinkedIn</a>
-                    <a href="https://github.com/gsousaigor" target="_blank" class="btn outline">GitHub</a>
-                    <a href="mailto:gsousaigor@gmail.com" class="btn">Email</a>
+        <section id="contact" class="section contact-section">
+            <div class="section-container">
+                <div class="contact-card">
+                    <h2>Segurança é prioridade?</h2>
+                    <p>Entre em contato para discutirmos como posso ajudar a blindar seu ecossistema de infraestrutura.</p>
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/gsousaigor/" target="_blank">LinkedIn</a>
+                        <a href="mailto:gsousaigor@gmail.com">Email</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Igor Garcia. <span class="highlight">Status: Operacional</span></p>
+    <footer class="main-footer">
+        <div class="section-container">
+            <p>&copy; 2024 Igor Garcia. <span class="status-indicator">●</span> DevSecOps Engineer</p>
+        </div>
     </footer>
 
     <script src="main.js"></script>
