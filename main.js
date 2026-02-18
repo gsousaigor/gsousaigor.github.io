@@ -1,39 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Revelar elementos ao scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('reveal-visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Selecionar elementos para revelar
-    const sections = document.querySelectorAll('.section, .hero-content, .stack-card, .timeline-item');
+    const commands = document.querySelectorAll('.command');
     
-    sections.forEach(el => {
-        el.classList.add('reveal-hidden');
-        observer.observe(el);
+    commands.forEach((command, index) => {
+        const text = command.innerText;
+        command.innerText = '';
+        
+        setTimeout(() => {
+            let i = 0;
+            const typing = setInterval(() => {
+                if (i < text.length) {
+                    command.innerText += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(typing);
+                }
+            }, 80);
+        }, index * 1000);
     });
 });
-
-// Adicionar estilos de revelação dinamicamente
-const style = document.createElement('style');
-style.textContent = `
-    .reveal-hidden {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-    .reveal-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-`;
-document.head.appendChild(style);
